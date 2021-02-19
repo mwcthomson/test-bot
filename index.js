@@ -16,3 +16,11 @@ bot.on('message', msg => {
     msg.reply(message);
   }
 });
+
+const http = require('http');
+const server = http.createServer((req, res) => {
+  console.log("test");
+  res.writeHead(200);
+  res.end('ok');
+});
+server.listen(3000);
